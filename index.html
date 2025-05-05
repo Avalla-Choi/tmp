@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>우리의 초대장</title>
+  <title>성우♡은비 모바일 청첩장</title>
   <style>
     * {
       margin: 0;
@@ -11,44 +11,44 @@
       box-sizing: border-box;
     }
 
-    body {
+    body, html {
+      height: 100%;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: white;
       color: #222;
-      line-height: 1.6;
     }
 
-    .section {
+    .hero {
       height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .image1 {
       background: url('images/image1.jpg') center/cover no-repeat;
+      position: relative;
     }
 
-    .fade {
+    .overlay {
       position: sticky;
       top: 0;
       height: 100vh;
       background: linear-gradient(to bottom,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.5) 40%,
+        rgba(255, 255, 255, 0.4) 40%,
         rgba(255, 255, 255, 0.85) 70%,
         rgba(255, 255, 255, 1) 100%);
-      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
       pointer-events: none;
     }
 
-    .image2 {
-      background: url('images/image2.jpg') center/cover no-repeat;
+    .overlay h1 {
+      font-size: 2rem;
+      pointer-events: auto;
     }
 
     .content {
-      padding: 40px 20px;
-      text-align: center;
       background: white;
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .content h2 {
@@ -66,15 +66,18 @@
     }
 
     .map a {
-      font-size: 1rem;
       color: #0066cc;
       text-decoration: underline;
+      font-size: 1rem;
     }
 
     @media (max-width: 600px) {
+      .overlay h1 {
+        font-size: 1.5rem;
+      }
+
       .content {
         font-size: 1rem;
-        padding: 30px 15px;
       }
 
       .content h2 {
@@ -89,16 +92,15 @@
 </head>
 <body>
 
-  <!-- 이미지 1 -->
-  <div class="section image1"></div>
+  <!-- 메인 이미지 배경 -->
+  <div class="hero"></div>
 
-  <!-- 그라데이션 오버레이 -->
-  <div class="fade"></div>
+  <!-- 스크롤 시 그라데이션 덮이며 텍스트 등장 -->
+  <div class="overlay">
+    <h1>소중한 날에 초대합니다</h1>
+  </div>
 
-  <!-- 이미지 2 -->
-  <div class="section image2"></div>
-
-  <!-- 마음 전할 곳 및 지도 -->
+  <!-- 마음 전할 곳 + 지도 -->
   <div class="content">
     <h2>마음을 전하실 곳</h2>
     <p>신랑: 국민은행 123456-78-901234</p>
