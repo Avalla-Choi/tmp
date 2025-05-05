@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 청첩장</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: sans-serif;
+    }
+
+    .section {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image1 {
+      background: url('image1.jpg') center/cover no-repeat;
+    }
+
+    .fade {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .image2 {
+      background: url('image2.jpg') center/cover no-repeat;
+    }
+
+    .content {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .map a {
+      display: inline-block;
+      margin-top: 10px;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section image1"></div>
+
+  <div class="fade"></div>
+
+  <div class="section image2"></div>
+
+  <div class="content">
+    <h2>마음을 전하실 곳</h2>
+    <p>신랑: 국민은행 123456-78-901234</p>
+    <p>신부: 신한은행 987654-32-109876</p>
+    <div class="map">
+      <h3>오시는 길</h3>
+      <a href="https://maps.google.com/?q=웨딩홀주소" target="_blank">Google 지도 보기</a>
+    </div>
+  </div>
+
+</body>
+</html>
